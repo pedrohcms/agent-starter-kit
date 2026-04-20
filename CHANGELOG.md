@@ -15,6 +15,9 @@ feat(architect): add LOC estimation per phase and Estimated Total LOC to plan te
 refactor(architect): raise phase-split threshold from ~1000 to ~1500 LOC
 docs(README): add MoE thinking-budget guidance with article link
 
+0.4.4 - 2026/04/06
+feat(dispatch): add Gemini as provider to routing matrix
+
 0.4.3 - 2026/04/03
 feat(maestro): add plan review gate — dedicated step between Parse and Dispatch ensures plans pass review before implementation
 
