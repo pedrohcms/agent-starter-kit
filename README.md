@@ -1,15 +1,15 @@
 # Agent Starter Kit
 
-> Speak naturally. A Maestro agent breaks your request into tasks and routes each one to a specialized AI model.
+> Describe what you need in plain language. The Maestro agent breaks it into tasks and routes each one to a specialized AI model.
 
-The scaffold for a fully customizable, **multi-model** AI harness in **pure natural language**. The smartest model orchestrates the workflow while cheaper/faster ones handle the less complicated bits, **extending your premium coding plan (such as Claude Code)**.
+Agent Starter Kit is a Natural Language AI Harness (NLAH) — multi-model, pure Markdown, zero dependencies. The smartest model orchestrates while cheaper, faster ones handle the routine work — extending your premium coding plan (such as Claude Code) instead of burning it on everything.
 
-It's model-agnostic: orchestrate from Claude, plan on Kimi, review on Qwen, or any combination you want.
+It's model-agnostic: orchestrate on Claude, plan on Kimi, review on Qwen, or any combination you choose.
 
 ![Boot sequence demo](docs/demo.jpg)
 _Maestro booted on a Clean Architecture Go project — gitignore, auto-update, memory, rules, and 33 context files created automatically._
 
-This is a **foundation**, not a finished product. It ships only what an average developer needs out of the box — general-purpose personas, common workflow skills, and unopinionated rules. Anything domain-specific or highly opinionated belongs in your own fork. Clone it, extend it, make it yours — or better yet, make one for your entire company to use.
+This is a **foundation**, not a finished product. It ships what an average developer needs out of the box — general-purpose personas, common workflow skills, and unopinionated rules. Anything domain-specific or highly opinionated belongs in your own fork. Clone it, extend it, make it yours — or build one for your entire company.
 
 ## How It Works
 
@@ -20,7 +20,9 @@ The **Maestro** is the conductor. It receives user requests, decomposes them, an
 - **Reviewer** — checks work for correctness and quality
 - **Contextualizer** — documents project structure for orientation
 
-Each persona has an identity (who they are), a playbook (what they do), a handoff format (what they deliver), and red lines (what they must not do). Each persona also declares a `humor` style — which controls temperature and thinking budget — plus a self-review rubric that scores its own work before delivery. Each persona declares a `preferredModel` — the Maestro uses this to route work to the right provider automatically. You can route every persona to the same model and skip multi-provider routing entirely if you prefer.
+Each persona has an identity (who they are), a playbook (what they do), a handoff format (what they deliver), and red lines (what they must not do).
+
+Each persona also declares a `humor` style — which controls temperature and thinking budget — plus a self-review rubric that scores its own work before delivery. The `preferredModel` field routes work to the right provider automatically. You can route every persona to the same model and skip multi-provider routing entirely if you prefer.
 
 The framework **learns as it works**. Corrections, preferences, and lessons are captured to long-term memory and carried into every future session. Interrupted work is tracked in session files so the next boot can resume where the last one stopped.
 
@@ -89,7 +91,6 @@ Skills codify procedures that personas reference. They answer "how to do X" so p
 - **review-loop** — LOC-based review tier selection with shapeshifter dispatch
 - **reviewer-architect-adversarial** — adversarial plan validation and assumption attack
 - **reviewer-handoff** — structured review summary format with verdict logic
-- **reviewer-scoring** — deterministic checklist-based review scoring
 - **reviewer-self-review** — SHIELD self-review rubric — unified reviewer quality gate
 - **task-tracking** — file-based to-do for multi-step work
 
